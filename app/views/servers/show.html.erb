@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @server.name %>
+</p>
+
+<p>
+  <b>Cpu:</b>
+  <%= @server.cpu %>
+</p>
+
+<p>
+  <b>Memory:</b>
+  <%= @server.memory %>
+</p>
+
+<p>
+  <b>Strage:</b>
+  <%= @server.strage %>
+</p>
+
+<p>
+  <b>Ip:</b>
+  <%= @server.ip %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @server.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_server_path(@server) %> |
+<%= link_to 'Back', servers_path %>

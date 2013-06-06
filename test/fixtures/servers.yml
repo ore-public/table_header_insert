@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  cpu: MyString
+  memory: 1
+  strage: 1
+  ip: MyString
+  note: MyText
+
+two:
+  name: MyString
+  cpu: MyString
+  memory: 1
+  strage: 1
+  ip: MyString
+  note: MyText

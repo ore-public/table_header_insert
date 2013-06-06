@@ -1,0 +1,43 @@
+<h1>Listing servers</h1>
+
+<table>
+
+  <%
+     header = <<EOS
+     <tr>
+       <th>Name</th>
+       <th>Cpu</th>
+       <th>Memory</th>
+       <th>Strage</th>
+       <th>Ip</th>
+       <th>Note</th>
+       <th></th>
+       <th></th>
+       <th></th>
+     </tr>
+EOS
+  %>
+
+  <% @servers.header_insert_each(header, 2) do |server, head| %>
+      <% if server.present? %>
+          <tr>
+            <td><%= server.name %></td>
+            <td><%= server.cpu %></td>
+            <td><%= server.memory %></td>
+            <td><%= server.strage %></td>
+            <td><%= server.ip %></td>
+            <td><%= server.note %></td>
+            <td><%= link_to 'Show', server %></td>
+            <td><%= link_to 'Edit', edit_server_path(server) %></td>
+            <td><%= link_to 'Destroy', server, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          </tr>
+      <% else %>
+        <%= raw head %>
+      <% end %>
+  <% end %>
+
+</table>
+
+<br/>
+
+<%= link_to 'New Server', new_server_path %>
